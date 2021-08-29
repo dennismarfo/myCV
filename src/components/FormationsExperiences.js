@@ -2,11 +2,13 @@ import React from "react"
 import "./FormationsExperiences.css"
 import DataFormation from "../datas/Formations"
 import Formations from "./Formations"
+import DataExperiences from "../datas/Experiences"
+import Experiences from "./Experiences"
 
 function FormationsExperiences() {
-    console.log(DataFormation)
     return <>
         <Formations datas={DataFormation} />
+        <Experiences datas={DataExperiences} />
     </>
 }
 
