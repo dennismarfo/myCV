@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500');
 
-* {
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
 }
 
 :root { 
@@ -14,10 +15,20 @@
   --text-color: #333333;
   --title-color: #111111;
   --date-color: #1f94c2;  
-  /* --dark-body-bg-color */
   --icon-color:var(--text-color);
   --circle-color:#AAA;
   --circle-color-plain: #555;
+  /* --dark-body-bg-color */
+  --dark-body--bg-color: #242424;
+  --dark-sidebar-bg-color: #171717;
+  --dark-text-color: #d8d8d8;
+  --dark-title-color: #ffffff;
+  --dark-date-color: #e6ef71;  
+  --dark-icon-color:var(--dark-text-color);
+  --dark-circle-color: rgb(108, 108, 108);
+  --dark-circle-color-plain: rgb(238, 238, 238);
+
+
 
   /* fonts */
   --body-font: "Poppins", "Sans-serif";
@@ -42,10 +53,23 @@ body {
   background-color: var(--body--bg-color);
 }
 
+.dark {
+  background-color: var(--dark-body--bg-color);
+  color: var(--dark-text-color);
+}
+
 h1, h2, h3 {
   margin-bottom: var(--spacing-1);
   font-weight: 400;
   color: var(--title-color);
+
+}
+
+.dark h1, 
+.dark h2, 
+.dark h3 {
+
+  color: var(--dark-title-color);
 
 }
 
@@ -62,6 +86,17 @@ h2 {
   letter-spacing: 4px;
   text-transform: uppercase;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dark button {
+  color: var(--dark-text-color);
+}
+
 
 a {
   text-decoration: none;
@@ -92,6 +127,10 @@ li {
 }
 
 /* grids */
+
+.grid__row {
+  margin: var(--spacing-3);
+}
 @media screen and (min-width:768px) {
   
   .grid_container{
@@ -113,6 +152,17 @@ li {
   background-color: var(--sidebar-bg-color);
 }
 
+.dark .sidebar {
+  
+  background-color: var(--dark-sidebar-bg-color);
+}
+
+
+.actions {
+
+  display: flex;
+  justify-content: space-between;
+}
 /* icons */
 .circle {
   display: inline-block;
@@ -125,6 +175,15 @@ li {
 
 .circle-plain {
   background-color: var(--circle-color-plain);
+}
+
+.dark .circle {
+
+  background-color: var(--dark-circle-color);
+}
+
+.dark .circle-plain {
+  background-color: var(--dark-circle-color-plain);
 }
 
 .main {
